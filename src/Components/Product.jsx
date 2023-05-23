@@ -5,7 +5,7 @@ const Product = (props) => {
 
 
     return (
-        <div className='row'>
+        <div className='row mt-3'>
             <div className='col-5'>
                 <h2> {props.product.name}
                     <span className='badge bg-secondary'> ₹
@@ -26,8 +26,13 @@ const Product = (props) => {
                         >-</button>
                     </div>
             </div>
-            <div className='col-4'>
+            <div className='col-2'>
             {props.product.quantity  * props.product.price}
+            </div>
+            <div className='col-2'>
+        <button className='btn btn-danger'
+          onClick={() => {props.remove(props.index)}}
+        >Removie</button>
             </div>
         </div>
     )
